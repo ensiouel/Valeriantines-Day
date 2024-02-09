@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Indie+Flower&family=Single+Day&display=swap');
+
+* {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xxx-large;
+}
+
+body {
+    background: #dce1e6;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#main {
+    width: 480px;
+    margin: 200px auto;
+    text-align: center;
+}
+
+#main img {
+    display: block;
+    margin: 0 auto;
+}
+
+#suggestion-yes {
+    background-color: #4bb34b;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    display: inline-block;
+    font-size: 32px;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+#suggestion-yes:hover {
+    cursor: pointer;
+    background-color: #65b865;
+}
+
+#suggestion-no {
+    background-color: #de5454;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    border-radius: 4px;
+    transition: all 0.5s ease-out;
+}
+
+#suggestion-no:hover {
+    cursor: pointer;
+    background-color: #f57272;
+}
+
+.rainbow-text {
+    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: Animation 5s ease infinite;
+    -moz-animation: Animation 5s ease infinite;
+    animation: Animation 5s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+    0%{background-position:10% 0}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0}
+}
+@-moz-keyframes Animation {
+    0%{background-position:10% 0}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0}
+}
+@keyframes Animation {
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+
+.fa-heart {
+    font-size: 32px;
+    position: absolute;
+    animation: heartMove linear 1;
+    top: -10vh;
+    z-index: 0;
+}
+
+@keyframes heartMove {
+    0% {
+        transform: translateY(-10vh);
+    }
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 512px;
+    border-radius: 8px;
+}

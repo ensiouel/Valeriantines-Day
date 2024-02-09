@@ -1,3 +1,4 @@
+const body = document.querySelector("body")
 let mousePosition = {x: 0, y: 0}
 
 function moveButton() {
@@ -21,46 +22,42 @@ function getRandPosition() {
     return {x: randomX, y: randomY}
 }
 
-document.addEventListener("mousemove", function (event) {
-    mousePosition.x = event.clientX
-    mousePosition.y = event.clientY
-});
-
-const body = document.querySelector("body");
-
-const list = ['❤️', '💖', '💌', '😘', '❤️‍🔥', '💘'];
+const list = ['🥰', '😍', '😘', '😻', '💌', '💘', '💝', '💖', '❤️', '💞'];
 
 function createHeart() {
     const heart = document.createElement("div");
     heart.className = "fa-heart";
     heart.textContent = list[Math.floor(Math.random() * list.length)];
-    heart.style.left = (Math.random() * 100)+"vw";
-    heart.style.animationDuration = (Math.random()*3)+2+"s"
+    heart.style.left = (Math.random() * 100) + "vw";
+    heart.style.animationDuration = (Math.random() * 3) + 2 + "s"
     body.appendChild(heart);
 }
 
 function startHeartRain() {
-    setInterval(createHeart,100);
+    setInterval(createHeart, 100);
     setInterval(function name(params) {
         let heartArr = document.querySelectorAll(".fa-heart")
         if (heartArr.length > 100) {
             heartArr[0].remove()
         }
-    },100)
+    }, 100)
 }
 
 let modal = document.getElementById("myModal");
 let btn = document.getElementById("suggestion-yes");
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
+btn.onclick = function () {
     modal.style.display = "block";
     startHeartRain();
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+window.onclick = function (event) {
+    if (event.target === modal) {
         modal.style.display = "none";
     }
 }
+
+document.addEventListener("mousemove", function (event) {
+    mousePosition.x = event.clientX
+    mousePosition.y = event.clientY
+});

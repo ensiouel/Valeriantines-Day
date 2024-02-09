@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Indie+Flower&family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
-    font-family: "Indie Flower", cursive;
-    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
     font-style: normal;
     font-size: xxx-large;
 }
 
 body {
-    background: #dce1e6;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     margin: 0;
+    background: #dce1e6 url("https://thumbs.dreamstime.com/b/valentines-day-seamless-pattern-love-romance-flat-line-icons-hearts-chocolate-kiss-cupid-doves-valentine-card-red-white-wallpaper-107559301.jpg");
+    background-blend-mode: screen;
+    background-size: 30%;
 }
 
 #main {
@@ -33,7 +35,7 @@ body {
     padding: 12px 24px;
     display: inline-block;
     font-size: 32px;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-right: 16px;
 }
 
@@ -51,7 +53,7 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 32px;
-    border-radius: 4px;
+    border-radius: 8px;
     transition: all 0.5s ease-out;
 }
 
@@ -83,7 +85,7 @@ body {
 @keyframes Animation {
     0%{background-position:10% 0%}
     50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
+    100%{background-position:10% 0}
 }
 
 .fa-heart {
@@ -104,23 +106,22 @@ body {
 }
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.2);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: #ffffff;
+    margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
     max-width: 900px;
     border-radius: 8px;
 }

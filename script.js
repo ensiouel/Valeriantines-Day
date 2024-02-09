@@ -43,7 +43,7 @@ function startHeartRain() {
     setInterval(createHeart,100);
     setInterval(function name(params) {
         let heartArr = document.querySelectorAll(".fa-heart")
-        if (heartArr.length > 200) {
+        if (heartArr.length > 100) {
             heartArr[0].remove()
         }
     },100)
